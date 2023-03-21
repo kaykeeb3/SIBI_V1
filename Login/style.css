@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins';
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url(img/background1.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container {
+  background-color: #FFFF;
+  padding: 10px;
+  width: 350px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 2px solid #2AB572;
+
+}
+
+form {
+  position: absolute;
+  margin-top: 80px;
+  transition: .5s;
+  width: 300px;
+  height: 400px;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+input[type="text"], input[type="password"] {
+  border: none;
+  margin-top: 40px;
+  border-radius: 60px;
+  padding: 8px 0 8px 35px;
+  outline: none;
+  width: 100%;
+  border: 2px solid #2AB572;
+}
+
+button[type="submit"] {
+  background-color: #2AB572;
+  color: #FFF;
+  border-radius: 30px;
+  width: 80%;
+  margin: 10%;
+  border: none;
+  outline: none;
+  padding: 8px 23px 11px 15px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2AB560 ;
+}
+
+#singnin {
+left: 25px;
+}
+
+.divCheck {
+margin: 13px 5px 10px;
+width: 80%;
+font-size: 13px;
+}
+
+#singnin {
+left: 25px;
+}
+
+i {
+position: absolute;
+opacity: 60%;
+left: 0;
+padding: 10px 10px;
+}
+
+
+.iUser {
+top: 40px;
+}
+
+.iPassword {
+top: 119px;
+}
