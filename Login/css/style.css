@@ -42,6 +42,7 @@ form {
 
 h1 {
   font-weight: 500;
+  opacity: 60%;
 }
 
 input[type="text"], input[type="password"] {
@@ -100,4 +101,14 @@ top: 40px;
 
 .iPassword {
 top: 119px;
+}
+
+.reseved {
+  position: absolute;
+  margin-top: 700px;
+}
+
+.reseved > h3 {
+ font-weight: 500;
+ color: #808586;
 }
