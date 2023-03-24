@@ -69,6 +69,12 @@ button[type="submit"] {
   cursor: pointer;
 }
 
+button > a {
+  text-decoration: none;
+  color: #000;
+  opacity: 60%;
+}
+
 button:hover {
   background-color: #2AB560 ;
 }
