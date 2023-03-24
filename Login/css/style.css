@@ -1,14 +1,29 @@
+@font-face {
+  font-family: TT-Hoves;
+  src: url("../fonts/tt-hoves-regular.otf");
+}
+
+@font-face {
+  font-family: TT-Hoves-Bold;
+  src: url("../fonts/tt-hoves-bold.otf");
+}
+
+@font-face {
+  font-family: TT-Interfaces-Bold;
+  src: url("../fonts/tt-interfaces-bold.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'poppins';
+  font-family: TT-Hoves;
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  background: url(img/background1.jpg);
+  background: url(../img/background1.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -41,14 +56,16 @@ form {
 }
 
 h1 {
+  font-family: TT-Hoves-Bold;
   font-weight: 500;
+  opacity: 60%;
 }
 
 input[type="text"], input[type="password"] {
   border: none;
   margin-top: 40px;
   border-radius: 60px;
-  padding: 8px 0 8px 35px;
+  padding: 11px 0 8px 35px;
   outline: none;
   width: 100%;
   border: 2px solid #2AB572;
@@ -63,9 +80,17 @@ button[type="submit"] {
   border: none;
   outline: none;
   padding: 8px 23px 11px 15px;
+  font-family: TT-Hoves;
   font-size: 15px;
   margin-top: 40px;
   cursor: pointer;
+}
+
+button > a {
+  text-decoration: none;
+  color: #000;
+  opacity: 60%;
+  font-family: TT-Hoves;
 }
 
 button:hover {
@@ -80,6 +105,8 @@ left: 25px;
 margin: 13px 5px 10px;
 width: 80%;
 font-size: 13px;
+font-weight: 100;
+opacity: 70%;
 }
 
 #singnin {
@@ -100,4 +127,15 @@ top: 40px;
 
 .iPassword {
 top: 119px;
+}
+
+.reseved {
+  position: absolute;
+  margin-top: 700px;
+}
+
+.reseved > h3 {
+ font-weight: 500;
+ color: #808586;
+ font-family: TT-Hoves;
 }
