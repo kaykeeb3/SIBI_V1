@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@font-face {
+  font-family: TT-Hoves;
+  src: url("fontes/tt-hoves-regular.otf");
+}
+
+@font-face {
+  font-family: TT-Hoves-Bold;
+  src: url("fontes/tt-hoves-bold.otf");
+}
+
+@font-face {
+  font-family: TT-Interfaces-Bold;
+  src: url("fontes/tt-interfaces-bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #DBEFE4;
+}
+.div-verde {
+  height: 25px;
+  width: 100%;
+  background-color: #2ab572;
+}
+.div-amarelo {
+  height: 25px;
+  width: 100%;
+  background-color: #ffba00;
+}
+.div-search {
+  position: relative;
+  display: flex;
+  padding: 10px 40px;
+  border-bottom: 1px dashed black;
+}
+.input-search {
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border-radius: 24px 0px 0px 24px;
+  border: 2px solid #808586;
+  border-right: none;
+  font-family: "TT-Interfaces-Bold";
+  font-size: 16px;
+}
+.btn-search {
+  padding-right: 8px;
+  border-radius: 0px 24px 24px 0px;
+  border: 2px solid #808586;
+  border-left: none;
+  background-color: white;
+  cursor: pointer;
+}
+.fa-search {
+  width: auto;
+  font-size: 25px;
+}
+
+h1 {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "TT-Hoves-Bold";
+}
+
+/*Css do Livro*/
+.livros-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding: 0px 5px;
+  width: auto;
+}
+.container-livro {
+  display: flex;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  width: auto;
+}
+.livro {
+  border: 3px solid #2ab752;
+  border-radius: 20px;
+  width: 222px;
+  background-color: white;
+}
+.livro-titulo {
+  font-family: "TT-Hoves-Bold";
+}
+.livro-autor {
+  color: #808586;
+  font-family: "TT-Hoves";
+}
+.livro p {
+  margin-left: 20px;
+}
+.span {
+  padding: 1px;
+  margin-left: 10px;
+  border-radius: 8px;
+  width: 80px;
+  text-align: center;
+  background-color: #2ab752;
+  color: white;
+  font-family: "TT-Hoves";
+}
+.disponivel {
+  font-weight: 300;
+}
+.livro-quantidade {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*Footer dos botões*/
+.footer {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color: rgba(219,239,228, 0.94);
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.btn-sair {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 4px;
+  width: auto;
+  text-align: center;
+  font-size: 25px;
+  font-family: "TT-Hoves";
+  background-color: #2ab752;
+  color: white;
+  cursor: pointer;
+}
+#icon-2 {
+  height: 40px;
+  width: 40px;
+}
+
+.btn-cadastrarLivro {
+  display: flex;
+  justify-content: center;
+  margin-left: 252px;
+  padding-top: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: "TT-Hoves";
+  width: auto;
+  background-color: #2ab752;
+  color: white;
+}
+#icon-1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
