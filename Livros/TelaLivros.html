@@ -1,3 +1,26 @@
+
+<!--
+
+if (isset( $_POST['nome'] ) ) {
+
+    $nome = $_POST['nome'];
+
+} else {
+
+   $nome = '';
+
+}
+
+include_once('../controller/conexao.php');
+
+/*seleciona a tabela livros dentro do banco de dados biblioteca_bd*/
+$sql = "SELECT *  FROM biblioteca_bd WHERE livros LIKE '%$nome%' ";
+
+$dados = mysqli_query($conexao, $sql);
+
+
+?>
+-->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -17,10 +40,11 @@
 
       <div class="div-verde"></div>
       <div class="div-amarelo"></div>
-      <div class="div-search">
-      <input class="input-search" type="search" placeholder="Pesquisar ex: Livro..."/>
-      <button class="btn-search"><i class="fa fa-search"></i></button>
-      </div>
+      
+      <form class="div-search" action="TelaLivros.html" method="POST">
+      <input name="nome" class="input-search" type="search" placeholder="Pesquisar ex: Livro..."/>
+      <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+      </form>
  
       
     <h1 class="categoria-title">Romance</h1>
@@ -40,8 +64,8 @@
       
       <div class="container-livro">
         <div class="livro">
-          <p class="livro-titulo">Dom Casmurro</p>
-          <p class="livro-autor">Machado de Assis</p>
+          <p class="livro-titulo">A Culpa É das Estrelas</p>
+          <p class="livro-autor">John Green</p>
         </div>
         <div class="span">
           <p class="disponivel">Disponível</p>
@@ -51,12 +75,12 @@
       
       <div class="container-livro">
         <div class="livro">
-          <p class="livro-titulo">Dom Casmurro</p>
-          <p class="livro-autor">Machado de Assis</p>
+          <p class="livro-titulo">Madame Bovary</p>
+          <p class="livro-autor">Gustave Flaubert</p>
         </div>
         <div class="span">
           <p class="disponivel">Disponível</p>
-          <p class="livro-quantidade">2</p>
+          <p class="livro-quantidade">1</p>
         </div>
       </div>
       
@@ -73,8 +97,8 @@
       
       <div class="container-livro">
         <div class="livro">
-          <p class="livro-titulo">Dom Casmurro</p>
-          <p class="livro-autor">Machado de Assis</p>
+          <p class="livro-titulo">A Culpa É das Estrelas</p>
+          <p class="livro-autor">John Green</p>
         </div>
         <div class="span">
           <p class="disponivel">Disponível</p>
@@ -84,12 +108,12 @@
       
       <div class="container-livro">
         <div class="livro">
-          <p class="livro-titulo">Dom Casmurro</p>
-          <p class="livro-autor">Machado de Assis</p>
+          <p class="livro-titulo">Madame Bovary</p>
+          <p class="livro-autor">Gustave Flaubert</p>
         </div>
         <div class="span">
           <p class="disponivel">Disponível</p>
-          <p class="livro-quantidade">2</p>
+          <p class="livro-quantidade">1</p>
         </div>
       </div>
       
@@ -106,8 +130,8 @@
       
       <div class="container-livro">
         <div class="livro">
-          <p class="livro-titulo">Dom Casmurro</p>
-          <p class="livro-autor">Machado de Assis</p>
+          <p class="livro-titulo">A Culpa É das Estrelas</p>
+          <p class="livro-autor">John Green</p>
         </div>
         <div class="span">
           <p class="disponivel">Disponível</p>
@@ -117,12 +141,12 @@
       
       <div class="container-livro">
         <div class="livro">
-          <p class="livro-titulo">Dom Casmurro</p>
-          <p class="livro-autor">Machado de Assis</p>
+          <p class="livro-titulo">Madame Bovary</p>
+          <p class="livro-autor">Gustave Flaubert</p>
         </div>
         <div class="span">
           <p class="disponivel">Disponível</p>
-          <p class="livro-quantidade">2</p>
+          <p class="livro-quantidade">1</p>
         </div>
       </div>
       
@@ -139,8 +163,8 @@
       
       <div class="container-livro">
         <div class="livro">
-          <p class="livro-titulo">Dom Casmurro</p>
-          <p class="livro-autor">Machado de Assis</p>
+          <p class="livro-titulo">A Culpa É das Estrelas</p>
+          <p class="livro-autor">John Green</p>
         </div>
         <div class="span">
           <p class="disponivel">Disponível</p>
@@ -150,6 +174,17 @@
       
       <div class="container-livro">
         <div class="livro">
+          <p class="livro-titulo">Madame Bovary</p>
+          <p class="livro-autor">Gustave Flaubert</p>
+        </div>
+        <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade">1</p>
+        </div>
+      </div>
+      
+      <div class="container-livro">
+        <div class="livro">
           <p class="livro-titulo">Dom Casmurro</p>
           <p class="livro-autor">Machado de Assis</p>
         </div>
@@ -159,16 +194,126 @@
         </div>
       </div>
       
+      <div class="container-livro">
+        <div class="livro">
+          <p class="livro-titulo">A Culpa É das Estrelas</p>
+          <p class="livro-autor">John Green</p>
+        </div>
+        <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade">0</p>
+        </div>
+      </div>
+      
+      <div class="container-livro">
+        <div class="livro">
+          <p class="livro-titulo">Madame Bovary</p>
+          <p class="livro-autor">Gustave Flaubert</p>
+        </div>
+        <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade">1</p>
+        </div>
+      </div>
+      
+      <div class="container-livro">
+        <div class="livro">
+          <p class="livro-titulo">Dom Casmurro</p>
+          <p class="livro-autor">Machado de Assis</p>
+        </div>
+        <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade">2</p>
+        </div>
+      </div>
+      
+      <div class="container-livro">
+        <div class="livro">
+          <p class="livro-titulo">A Culpa É das Estrelas</p>
+          <p class="livro-autor">John Green</p>
+        </div>
+        <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade">0</p>
+        </div>
+      </div>
+      
+      <div class="container-livro">
+        <div class="livro">
+          <p class="livro-titulo">Madame Bovary</p>
+          <p class="livro-autor">Gustave Flaubert</p>
+        </div>
+        <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade">1</p>
+        </div>
+      </div>
+      
+      <div class="container-livro">
+        <div class="livro">
+          <p class="livro-titulo">Dom Casmurro</p>
+          <p class="livro-autor">Machado de Assis</p>
+        </div>
+        <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade">2</p>
+        </div>
+      </div>
+      
+      <div class="container-livro">
+        <div class="livro">
+          <p class="livro-titulo">A Culpa É das Estrelas</p>
+          <p class="livro-autor">John Green</p>
+        </div>
+        <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade">0</p>
+        </div>
+      </div>
+      
+      <div class="container-livro">
+        <div class="livro">
+          <p class="livro-titulo">Madame Bovary</p>
+          <p class="livro-autor">Gustave Flaubert</p>
+        </div>
+        <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade">1</p>
+        </div>
+      </div>
+      
+      <!--PHP para exibir o conteúdo
+      
+          while ($livro = mysqli_fetch_assoc($dados) ) {
+          $livroTitulo = $livro['variavle_nome_no_BD'];
+          $livroAutor = $livro['variavel_autor_no_BD'];
+          $livroQuantidade = $livro['variavel_quantidade_no_BD'];
+          
+          echo "
+          <div class="container-livro">
+          <div class="livro">
+          <p class="livro-titulo"> $livroTitulo </p>
+          <p class="livro-autor"> $livroAutor </p>
+          </div>
+          <div class="span">
+          <p class="disponivel">Disponível</p>
+          <p class="livro-quantidade"> $livroQuantidade </p>
+          </div>
+          </div>
+          "
+          }
+      ?>
+      -->
     </div>
     
     <div class="footer">
-      
-    <button class="btn-sair" type="submit"><img src="./assets/icon-sair.png" id="icon-2" />Sair</button>  
-   
+    <div class="div-cadastrar">
     <button class="btn-cadastrarLivro" type="submit"><i class="fa fa-solid fa-folder-open" id="icon-1">Cadastrar Livro</i></button>
+    </div>
+    <button class="btn-sair" type="submit"><img src="./assets/icon-sair.png" id="icon-2" />Sair</button>  
 
     </div>
     
-   
+   <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

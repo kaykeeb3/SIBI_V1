@@ -36,7 +36,7 @@ body {
 .div-search {
   position: relative;
   display: flex;
-  padding: 10px 40px;
+  padding: 10px 60px;
   border-bottom: 1px dashed black;
 }
 .input-search {
@@ -63,8 +63,9 @@ body {
 }
 
 h1 {
-  margin-top: 10px;
+  margin-top: 30px;
   text-align: center;
+  font-size: 40px;
   font-family: "TT-Hoves-Bold";
 }
 
@@ -73,8 +74,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 100px;
+  margin-top: 70px;
+  margin-bottom: 64px;
   padding: 0px 5px;
   width: auto;
 }
@@ -87,14 +88,20 @@ h1 {
 .livro {
   border: 3px solid #2ab752;
   border-radius: 20px;
-  width: 222px;
+  width: 260px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   background-color: white;
 }
 .livro-titulo {
+  padding-bottom: 2px;
+  font-size: 18px;
   font-family: "TT-Hoves-Bold";
 }
 .livro-autor {
   color: #808586;
+  font-weight: 600;
+  font-size: 16px;
   font-family: "TT-Hoves";
 }
 .livro p {
@@ -111,25 +118,28 @@ h1 {
   font-family: "TT-Hoves";
 }
 .disponivel {
-  font-weight: 300;
+  font-weight: 500;
 }
 .livro-quantidade {
+  margin-top: 10px;
   font-weight: bold;
   font-size: 20px;
 }
 
 /*Footer dos botões*/
 .footer {
-  display: flex;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   background-color: rgba(219,239,228, 0.94);
-  
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-
+.div-cadastrar {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
 .btn-sair {
   display: flex;
   align-items: center;
@@ -153,8 +163,7 @@ h1 {
 .btn-cadastrarLivro {
   display: flex;
   justify-content: center;
-  margin-left: 252px;
-  padding-top: 4px;
+  padding-top: 8px;
   padding-left: 20px;
   padding-right: 20px;
   border: 1px solid white;
