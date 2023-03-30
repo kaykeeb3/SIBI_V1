@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #DBEFE4;
+  }
+  
+
+
+header .bg-green {
+    background-color: #2AB572;
+  }
+  
+  header .bg-yellow {
+    background-color: #FFBA00;
+  }
+  
+  @media screen and (min-width: 1020px) {
+    body {
+      background-color: #DBEFE4;
+    }
+  }
+  
+.search {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.search-box {
+  width: 70%;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border: solid #747474;
+  border-radius: 20px;
+}
+.search-box > input {
+  width: 94%;
+  border: 2px white solid;
+  border-radius: 30px;
+  height: 50px;
+  color: #575555;
+  padding: 10px;
+  font-size: 20px;
+}  
+
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.search-box > a {
+  font-size: 28px;  
+}
+.addNew {
+    display: flex;
+    justify-content: center;
+}
+
+.addNew > button{
+    background-color: #2AB572;
+    color: #FFF;
+    margin-top: 15px;
+    border-radius: 20px;
+    padding: 2px;
+    font-size: 16px;
+    width: 210px;
+    height:50px;
+    border: none;
+    white-space: nowrap;
+}
+
+.addNew > button > a > i {
+  font-size:16px ;
+  margin-left: 7px;
+}
+
+a  {
+ cursor: grab;
+}
+.container {
+  border-top: 2px dashed black;
+ display: flex;
+ margin-top: 8px;
+ justify-content: center;
+ flex-direction: column;
+}
+main {
+    margin-top: 10px ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #2bb573;
+    border-radius: 12px;
+    width: 28%;
+    height: 430px;
+    background-color: #f9f3e5;
+    font-size: 20px;
+    color: #808589;
+    padding: 1px;
+}
+label {
+ font-size: 22px;
+ font-weight: bold;
+}
+.row1 {
+    margin-top: 24px;
+    margin-bottom: 18px;
+    padding-left: 18px;
+    width: 100%;
+    height: 20px;
+} 
+
+
+.row {
+    border-top: 2px dashed black;
+    margin-top: 26px;
+    margin-bottom: 28px;
+    padding-left: 18px;
+    padding-top: 12px;
+    width: 100%;
+    height: 20px;
+}
+
+.row>p {
+    padding: 5px;
+    font-size: 18px;
+}
+
+.edit > a > i{
+  color: #2AB572;
+  font-size: 33px;
+  margin: 20px;
+}
+
+.delete> a > i {
+  color: #df2020;
+  font-size: 33px;
+  margin-top: 20px;
+  margin-left: 16vw;
+}
+.row-icons {
+  border-top: 2px dashed black;
+  display: flex;
+  margin-top: 26px;
+  padding: 10px;
+  width: 100%;
+  height: 20px;
+}
+
+footer {
+  display: flex;
+}
+
+.quit > button {
+  background-color: #2AB572;
+  color: #FFF;
+  margin-left: 20px; 
+  border-radius: 2px;
+  width: 110px;
+  height: 30px;
+  border: none;
+  margin-right: 32vw;
+  font-size: 22px;
+  margin-top: 40px;
+}
+.quit > button > a > i {
+ margin: 5px;
+}
