@@ -129,3 +129,10 @@ header .bg-yellow {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .reseved > h3 {
+    font-weight: 500;
+    margin-top: -45px;
+  }
+}
+
