@@ -75,7 +75,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 70px;
-  margin-bottom: 64px;
+  margin-bottom: 75px;
   padding: 0px 5px;
   width: auto;
 }
@@ -128,8 +128,8 @@ h1 {
 
 /*Footer dos botões*/
 .footer {
-  padding-top: 10px;
-  padding-bottom: 15px;
+  padding-top: 8px;
+  padding-bottom: 10px;
   background-color: rgba(219,239,228, 0.94);
   position: fixed;
   bottom: 0;
@@ -143,39 +143,32 @@ h1 {
 .btn-sair {
   display: flex;
   align-items: center;
-  padding-right: 10px;
   margin-left: 15px;
   border: none;
   border-radius: 4px;
-  width: auto;
+  width: 125px;
+  height: 55px;
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   font-family: "TT-Hoves";
   background-color: #2ab752;
   color: white;
   cursor: pointer;
 }
 #icon-2 {
-  height: 40px;
-  width: 40px;
+  width: 52px;
+  height: 52px;
 }
-
 .btn-cadastrarLivro {
-  display: flex;
-  justify-content: center;
-  padding-top: 8px;
-  padding-left: 20px;
-  padding-right: 20px;
   border: 1px solid white;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 25px;
   font-family: "TT-Hoves";
-  width: auto;
+  width: 280px;
+  height: 55px;
   background-color: #2ab752;
   color: white;
 }
 #icon-1 {
   font-size: 28px;
-  margin-bottom: 4px;
 }
