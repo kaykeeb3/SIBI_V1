@@ -175,6 +175,11 @@ h1 {
   background-color: #2ab752;
   color: white;
 }
+
+a {
+  text-decoration: none;
+}
+
 #icon-1 {
   font-size: 28px;
   margin-bottom: 4px;

@@ -1,3 +1,7 @@
+<?php
+  include('protect.php')
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -46,7 +50,7 @@
     <div class="container-1">
       <div class="box-col">
         <div class="icon">
-        <a href="../Login/hindex.html"><i class="fas fa-arrow-left"></i></a>
+        <a href="../Login/hindex.php"><i class="fas fa-arrow-left"></i></a>
         </div>
         <h1>Sair</h1>
       </div>
