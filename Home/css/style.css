@@ -114,7 +114,6 @@ header .bg-yellow {
 
 
 .reseved > h3 {
-  color: red;
   font-family: TT-Hoves-Bold;
   font-size: 22px;
   font-weight: 700;
@@ -123,16 +122,15 @@ header .bg-yellow {
   padding: 0px 0px 0px;
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (max-width: 1020px) {
   body {
     background-color: #DBEFE4;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1700px) {
   .reseved > h3 {
     font-weight: 500;
-    margin-top: -45px;
   }
 }
 
