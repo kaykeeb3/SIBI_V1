@@ -13,7 +13,7 @@
       $senha = $mysqli->real_escape_string($_POST['senha']);
 
       $sql_code = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
-      $sql_query = $mysqli->query($sql_code) or die("Falha na execução do cógigo: " . $mysqli->error);
+      $sql_query = $mysqli->query($sql_code) or die("Falha na execução do cógigo: ");
 
       $quantidade = $sql_query->num_rows;
 
@@ -33,7 +33,7 @@
         header("Location: ../Home/hindex.php");
 
       } else {
-        echo "<h1 style='margin-top: -590px; font-size: 19px; margin-right: -390px; font-size: 20px; color: red;'>Falha ao logar! Usuário ou Senha incorretos</h1>";
+         echo "<h1 style='margin-top: -590px; font-size: 20px;  color: red; position: fixed;'>Falha ao logar! Usuário ou Senha incorretos</h1>";
       }  
     }
   }
@@ -51,7 +51,6 @@
   <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!--action="../Home/hindex.php"-->
   <div class="container">
     <h1>Faça seu login</h1>
     <form id="singnin"  method="POST"> 
