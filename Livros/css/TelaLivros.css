@@ -36,7 +36,7 @@ body {
 .div-search {
   position: relative;
   display: flex;
-  padding: 10px 60px;
+  padding: 10px 54px;
   border-bottom: 1px dashed black;
 }
 .input-search {
@@ -60,6 +60,17 @@ body {
 .fa-search {
   width: auto;
   font-size: 25px;
+}
+#selectCategorias {
+  margin-left: 6px;
+  outline: none;
+  border-radius: 24px;
+  border: 2px solid #808586;
+  background-color: #2ab572;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  font-family: "TT-Interfaces-Bold";
 }
 
 h1 {
@@ -89,29 +100,32 @@ h1 {
   border: 3px solid #2ab752;
   border-radius: 20px;
   width: 260px;
+  max-width: 260px;
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: white;
 }
 .livro-titulo {
-  padding-bottom: 2px;
   font-size: 18px;
   font-family: "TT-Hoves-Bold";
 }
 .livro-autor {
+  padding-top: 8px;
   color: #808586;
   font-weight: 600;
   font-size: 16px;
   font-family: "TT-Hoves";
 }
 .livro p {
-  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 5px;
 }
 .span {
   padding: 1px;
   margin-left: 10px;
   border-radius: 8px;
   width: 80px;
+  height: 65px;
   text-align: center;
   background-color: #2ab752;
   color: white;
@@ -169,11 +183,6 @@ h1 {
   background-color: #2ab752;
   color: white;
 }
-
-a {
-  text-decoration: none;
-}
-
 #icon-1 {
   font-size: 28px;
 }
