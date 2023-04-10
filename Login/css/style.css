@@ -140,9 +140,12 @@ top: 119px;
  font-weight: 500;
  color: #808586;
  margin-top: -20px;
-//<<<<<<< HEAD
  font-family: TT-Hoves;
 }
-//=======
-//>>>>>>> cdbe20bcd51bedee194d8ad334fa9e3626b2dd87
+
+@media screen and (min-width: 1900px) {
+  .reseved > h3 {
+    margin-top: 19rem;
+  }
+}
 

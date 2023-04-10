@@ -134,3 +134,16 @@ header .bg-yellow {
   }
 }
 
+
+@media screen and (min-width: 1900px) {
+  .container-1 {
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .reseved > h3 {
+    margin-top: 7rem;
+  }
+}
+
