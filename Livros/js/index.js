@@ -10,3 +10,6 @@ for (let index = 0; index < livroQuantidade.length; index++) {
 	  divSpan[index].style.backgroundColor = '#ffba00'
 	}
 }
+
+/*Futura feature:
+Adicionar dinamicamente o titulo h1 de acordo com a categoria/gênero de livros*/

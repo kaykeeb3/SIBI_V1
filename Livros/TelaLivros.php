@@ -6,13 +6,13 @@ if (isset( $_GET['busca'] ) ) {
   $pesquisa = '';
 }
 
-include_once('conexao.php');
+include_once('../Cadastros/conexao.php');
 include_once('categorias.php');
 
 $sql = "SELECT *  FROM livro 
-                WHERE titulo LIKE '%$pesquisa%' 
-                OR autor LIKE '%$pesquisa%'
-                OR quantidade LIKE
+                WHERE nome_livro LIKE '%$pesquisa%' 
+                OR autor_livro LIKE '%$pesquisa%'
+                OR quant_livro LIKE
                   '%$pesquisa%' ";
                   
 
@@ -71,9 +71,9 @@ $dados = mysqli_query($mysqli, $sql);
          if ($categorias === 'Todos') {
         
           while ($livro = mysqli_fetch_assoc($dados) ) {
-          $livroTitulo = $livro['titulo'];
-          $livroAutor = $livro['autor'];
-          $livroQuantidade = $livro['quantidade'];
+          $livroTitulo = $livro['nome_livro'];
+          $livroAutor = $livro['autor_livro'];
+          $livroQuantidade = $livro['quant_livro'];
         ?>
         
         <div class='container-livro'>
@@ -93,9 +93,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Romance') {
           while ($livro = mysqli_fetch_assoc($dadosRomance) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
           ?>
           <div class='container-livro'>
           <div class='livro'>
@@ -113,9 +113,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Aventura') {
           while ($livro = mysqli_fetch_assoc($dadosAventura) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -133,9 +133,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Fantasia') {
           while ($livro = mysqli_fetch_assoc($dadosFantasia) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -153,9 +153,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Drama') {
           while ($livro = mysqli_fetch_assoc($dadosDrama) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -173,9 +173,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Suspense') {
           while ($livro = mysqli_fetch_assoc($dadosSuspense) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -193,9 +193,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'TerrorHorror') {
           while ($livro = mysqli_fetch_assoc($dadosTerrorHorror) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -213,9 +213,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Crônica') {
           while ($livro = mysqli_fetch_assoc($dadosCronica) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -233,9 +233,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Conto') {
           while ($livro = mysqli_fetch_assoc($dadosConto) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -253,9 +253,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Poesia') {
           while ($livro = mysqli_fetch_assoc($dadosPoesia) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -273,9 +273,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Biografia') {
           while ($livro = mysqli_fetch_assoc($dadosBiografia) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -293,9 +293,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Nacional') {
           while ($livro = mysqli_fetch_assoc($dadosNacional) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -313,9 +313,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Material Acadêmico') {
           while ($livro = mysqli_fetch_assoc($dadosAcademico) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -333,9 +333,9 @@ $dados = mysqli_query($mysqli, $sql);
           if ($categorias === 'Outros') {
           while ($livro = mysqli_fetch_assoc($dadosOutros) ) {
             
-            $livroTitulo = $livro['titulo'];
-            $livroAutor = $livro['autor'];
-            $livroQuantidade = $livro['quantidade'];
+            $livroTitulo = $livro['nome_livro'];
+            $livroAutor = $livro['autor_livro'];
+            $livroQuantidade = $livro['quant_livro'];
         ?>
         <div class='container-livro'>
           <div class='livro'>
@@ -356,9 +356,9 @@ $dados = mysqli_query($mysqli, $sql);
     
     <div class="footer">
     <div class="div-cadastrar">
-    <button class="btn-cadastrarLivro" type="submit"><i class="fa fa-solid fa-folder-open" id="icon-1">Cadastrar Livro</i></button>
+    <a href="../Cadastros/CadastroLivros.php" class="btn-cadastrarLivro"><i class="fa fa-solid fa-folder-open" id="icon-1"></i>Cadastrar Livro</a>
     </div>
-    <button class="btn-sair" type="submit"><img src="./assets/icon-sair.png" id="icon-2" />Sair</button>  
+    <a href="../Home/hindex.php" class="btn-sair"><img src="./assets/icon-sair.png" id="icon-2" />Sair</a>
 
     </div>
     
