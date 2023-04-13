@@ -121,9 +121,6 @@
   
   </form>
 </div>
-
-
-         
          <footer>
             <div class="quit">
                 <button><a href="../Home/hindex.php"><p><i class="fa-solid fa-power-off"></i>Sair</p></a></button>
@@ -135,8 +132,6 @@
              
             </div>
          </footer>
-       
-    
     </div>
    </div>
 </div>
