@@ -1,0 +1,271 @@
+@font-face {
+  font-family: TT-Hoves;
+  src: url("fonts/tt-hoves-regular.otf");
+}
+
+@font-face {
+  font-family: TT-Hoves-Bold;
+  src: url("fonts/tt-hoves-bold.otf");
+}
+
+@font-face {
+  font-family: TT-Interfaces-Bold;
+  src: url("fonts/tt-interfaces-bold.ttf");
+}
+
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+  body{
+    background-color: #dbefe4;
+  }
+
+  header .bg-green {
+    background-color: #2AB572;
+  }
+
+  header .bg-yellow {
+    background-color: #FFBA00;
+  }
+
+
+  .container{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container-form{
+    width: 53vw;
+    height: 90vh;
+    border: solid 4px #2ab572;
+    background-color: #fff;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  .title{
+    text-align: center;
+    color: #808586;
+    
+    font-size: 45px;
+    font-family: TT-Hoves-Bold;
+  }
+
+  input{
+    background-color: #dbefe4;
+    font-size: 20px;
+    height: 3.6rem;
+    width: 390px;
+    padding: 15px;
+    border-radius: 1.5em !important;
+    border: solid 3px #2ab572 !important;
+  }
+
+  .form-area{
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .col{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .label-form{
+    font-weight: bold;
+    color: #808586;
+    font-size: 18px;
+    font-family: TT-Interfaces-Bold;
+  }
+
+  .btn-form{
+    margin-top: 30px;
+    width: 245px;
+    height: 55px;
+    border-radius: 1.55em;
+    background-color: #2ab572;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: TT-Hoves;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-exit{
+    
+    width: 125px;
+    height: 55px;
+    text-decoration: none;
+    background-color: #2ab572;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    border-radius: 0.5rem;
+    font-family: TT-Hoves; 
+    border: none;
+    cursor: pointer;
+  }
+
+  #exitIcon{
+    width: 52px;
+    height: 52px;
+  }
+
+  datalist {
+    position: absolute;
+    max-height: 20em;
+    border: 0 none;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  datalist option {
+    font-size: 0.8em;
+    padding: 0.3em 1em;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  
+  /* option active styles */
+  datalist option:hover,
+  datalist option:focus {
+    color: #fff;
+    background-color: #036;
+    outline: 0 none;
+  }
+  
+  #browserdata option {
+    font-size: 1.8em;
+    padding: 0.3em 1em;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+
+  @media (max-width: 930px){
+    .container-form{
+      width: 75vw;
+    }
+    input{
+      width: 270px;
+      font-size: 18px;
+      height: 3.0rem;
+      padding: 5px;
+    }
+
+    .form-area{
+      gap: 38px;
+    }
+  }
+
+  @media (min-width: 931px) and (max-width: 1169px){
+    .container-form{
+      width: 68vw;
+    }
+    input{
+      width: 280px;
+      font-size: 18px;
+      height: 3.0rem;
+      padding: 5px;
+    }
+
+    .form-area{
+      gap: 38px;
+    }
+  }
+
+  @media (min-width: 1170px) and (max-width: 1329px){
+    .container-form{
+      width: 60vw;
+    }
+    input{
+      width: 290px;
+      font-size: 18px;
+      height: 3rem;
+      padding: 5px;
+    }
+
+    .form-area{
+      gap: 34px;
+    }
+  }
+
+  @media (min-width: 1330px) and (max-width: 1570px){
+    input{
+      width: 320px;
+      font-size: 18px;
+      height: 3.4rem;
+      padding: 15px;
+    }
+
+    .form-area{
+      gap: 45px;
+    }
+  }
+
+  
+  .hide {
+    display: none;
+    position: absolute;
+
+}
+
+  .show{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.75)  
+  }
+
+  .show h1{
+    font-size: 45px;
+      font-family: TT-Hoves-Bold;
+    color: #2AB572;
+    margin-bottom: 5px;
+  }
+
+  .modal-conteudo{
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    width: 30rem;
+    background: #f2f2f2;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
