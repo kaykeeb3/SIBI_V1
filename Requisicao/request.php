@@ -126,7 +126,7 @@
          
          <footer>
             <div class="quit">
-                <button><a href="../Home/hindex.html"><p><i class="fa-solid fa-power-off"></i>Sair</p></a></button>
+                <button><a href="../Home/hindex.php"><p><i class="fa-solid fa-power-off"></i>Sair</p></a></button>
             </div>
             <div class="addNew">
                 <a><button><a href="../Cadastros/CadastroRequisicao.php">Cadastrar Requisição<i class="fa-solid fa-arrow-right-to-bracket"></i></a></button> 
