@@ -90,10 +90,9 @@ button > a {
   text-decoration: none;
   color: #000;
   opacity: 60%;
-<<<<<<< HEAD
+
   font-family: TT-Hoves;
-=======
->>>>>>> cdbe20bcd51bedee194d8ad334fa9e3626b2dd87
+
 }
 
 button:hover {
@@ -140,9 +139,13 @@ top: 119px;
 .reseved > h3 {
  font-weight: 500;
  color: #808586;
-<<<<<<< HEAD
+ margin-top: -20px;
  font-family: TT-Hoves;
 }
-=======
+
+@media screen and (min-width: 1900px) {
+  .reseved > h3 {
+    margin-top: 19rem;
+  }
 }
->>>>>>> cdbe20bcd51bedee194d8ad334fa9e3626b2dd87
+

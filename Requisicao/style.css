@@ -71,16 +71,27 @@ header .bg-green {
   font-family: 'TT-Hoves';
 }  
 
+.search-box > input [type="search"]:hover {
+  color: white;
+}
+
 textarea:focus, input:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
 }
 
-.search-box > a {
+
+.search-box > button   {
   font-size: 28px;  
+  border:none;
+  cursor: grab;
+  background-color: transparent;
 }
+
 a  {
  cursor: grab;
+ text-decoration: none;
+ color: white;
 }
 
 .container {
@@ -94,19 +105,26 @@ a  {
 }
 
 main {
-    margin-top: 4vh;
-    height: 55vh;
+    margin-top: 3vh;
+    height: auto;
+    width: 100%;
+    margin-bottom: 2vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
  }
 .card {
     display: flex;
     height: 60vh;
+    margin-top: 0;
+    margin: 2vw;
    flex-direction: column;
     border: 3px solid #2bb572;
     border-radius: 12px;
-    width: 30%;
+    width: 20%;
+    margin-bottom: 1vh;
     background-color: #f9f3e5;
     font-size: 20px;
     color: #6b6f72;
@@ -145,7 +163,13 @@ label {
   height: 50%;
 
 }
-.edit > a > i{
+
+.edit > form > button {
+  border: none;
+  background-color: transparent;
+  cursor: grab;
+}
+.edit > form > button > i{
   color: #2AB572;
   font-size: max(33px,2vw);
 
@@ -173,33 +197,41 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 2%;
+  pointer-events: none;
   
 }
 
 .quit {
   width: 40%;
   flex-grow: 0;
+
 }
 .quit > button {
   background-color: #2AB572;
-  color: #FFF; 
+  cursor: grab;
+  color: #fff; 
   border-radius: 5px;
   font-family: 'TT-Hoves';
   width: 20%;
   margin-left: 10px;
   height: 60%;
   border: none;
+  white-space: nowrap;
   font-size: max(20px,1vw);
   margin-top: 30px;
 }
-.quit > button > a > i {
- margin: 5px;
- font-size: max(17px,1vw);
 
+.quit > button > a > p {
+ white-space: nowrap;
+ font-size: max(17px,1vw);
+ pointer-events: all;
 }
 
+.quit > button > a > p > i {
+  margin: 5px;
+}
 
 .addNew {
   display: flex;
@@ -216,20 +248,138 @@ footer {
   border-radius: 20px;
   padding: 1px;
   font-size: max(17px,1vw);
-  width: 70%;
+  width: 74%;
   height:70%;
   border: none;
+  pointer-events: all;
   font-family: 'TT-Hoves';
   white-space: nowrap;
 }
 
 .addNew > button > a > i {
-font-size:max(19px,1vw) ;
-margin-left: 4px;
+font-size:max(18px,1vw) ;
+margin-left: 3px;
 }
 
 .emptyspace {
   width: 40%;
-
+  pointer-events: none;
   flex-grow: 0;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  width: 25vw;
+  background: #f2f2f2;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.modal > form {
+ height: 100%;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ ;
+}
+
+
+.modal > form > p{
+  font-family: TT-Hoves;
+  font-size:max(23px,1.1vw);
+  white-space: nowrap;
+  padding-bottom: 12px;
+ }
+
+.row-btn{
+ display: flex;
+ width: 100%;
+ height: 4vh;
+ justify-content: space-between;
+ padding-top: 12px;
+}
+
+#Cancel {
+ width: 42%;
+ height: 4vh;
+ color: white;
+ border: none;
+ background-color: #2AB572 ;
+ font-size:max(20px,1vw);
+}
+
+#Confirm {
+  background-color: #df2020;
+  width: 42%;
+  height: 4vh;
+  border: none;
+  color: white;
+  font-size:max(20px,1vw)
+}
+
+.hide {
+  display: none;
+  position: absolute;
+
+}
+
+.show{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.75)  
+}
+
+.show h1{
+  font-size: 45px;
+    font-family: TT-Hoves-Bold;
+    color: #2AB572;
+  margin-bottom: 5px;
+}
+
+
+.modal-conteudo{
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  width: 30rem;
+  background: #f2f2f2;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.modal-fail > h1 {
+  font-size: 45px;
+  font-family: TT-Hoves-Bold;
+  color: #df2020 ;
+margin-bottom: 5px;
+}
+
+
+
+
+
