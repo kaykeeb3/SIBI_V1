@@ -1,19 +1,19 @@
 <?php
 
 
-$sqlCategoriaRomance = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Romance%'";
-$sqlCategoriaAventura = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Aventura%'";
-$sqlCategoriaFantasia = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Fantasia%'";
-$sqlCategoriaDrama = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Drama%'";
-$sqlCategoriaSuspense = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Suspense%'";
-$sqlCategoriaTerrorHorror = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Terror%' OR genero_livro LIKE '%Horror%'";
-$sqlCategoriaCronica = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Cronica%'";
-$sqlCategoriaConto = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Conto%'";
-$sqlCategoriaPoesia = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Poesia%'";
-$sqlCategoriaBiografia = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Biografia%'";
-$sqlCategoriaNacional = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Nacional%'";
-$sqlCategoriaAcademico = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Material%' OR genero_livro LIKE '%Academico%'";
-$sqlCategoriaOutros = "SELECT nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Outros%'";
+$sqlCategoriaRomance = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Romance%'";
+$sqlCategoriaAventura = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Aventura%'";
+$sqlCategoriaFantasia = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Fantasia%'";
+$sqlCategoriaDrama = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Drama%'";
+$sqlCategoriaSuspense = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Suspense%'";
+$sqlCategoriaTerrorHorror = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Terror%' OR genero_livro LIKE '%Horror%'";
+$sqlCategoriaCronica = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Cronica%'";
+$sqlCategoriaConto = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Conto%'";
+$sqlCategoriaPoesia = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Poesia%'";
+$sqlCategoriaBiografia = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Biografia%'";
+$sqlCategoriaNacional = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Nacional%'";
+$sqlCategoriaAcademico = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Material%' OR genero_livro LIKE '%Academico%'";
+$sqlCategoriaOutros = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Outros%'";
 
 $dadosRomance = mysqli_query($mysqli, $sqlCategoriaRomance);
 $dadosAventura = mysqli_query($mysqli, $sqlCategoriaAventura);

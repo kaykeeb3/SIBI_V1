@@ -97,6 +97,8 @@ h1 {
   width: auto;
 }
 .livro {
+  display: flex;
+  justify-content: space-between;
   border: 3px solid #2ab752;
   border-radius: 20px;
   width: 260px;
@@ -104,6 +106,10 @@ h1 {
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: white;
+}
+.div-info {
+  width: 207px;
+  max-width: 207px;
 }
 .livro-titulo {
   font-size: 18px;
@@ -118,7 +124,20 @@ h1 {
 }
 .livro p {
   padding-left: 10px;
-  padding-right: 5px;
+  text-align: left;
+}
+.div-edit {
+  padding-left: 10px;
+  padding-right: 8px;
+  width: auto;
+}
+.edit {
+  background: none;
+  border: none;
+}
+.edit > i {
+  color: #2AB572;
+  font-size: 28px;
 }
 .span {
   padding: 1px;
