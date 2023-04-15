@@ -136,7 +136,7 @@ error_reporting(E_ALL);
                </div>
              </div>
           </form>
-          <a href="../Home/hindex.php" class="btn-exit"> <img id="exitIcon" src="assets/exit-icon.png" alt="exitIcon"></i>Sair </a>
+          <a href="../Requisicao/request.php" class="btn-exit"> <img id="exitIcon" src="assets/exit-icon.png" alt="exitIcon"></i>Sair </a>
       </div>
    </div>
 
