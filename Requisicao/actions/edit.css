@@ -1,16 +1,16 @@
 @font-face {
   font-family: TT-Hoves;
-  src: url("fonts/tt-hoves-regular.otf");
+  src: url("../fonts/tt-hoves-regular.otf");
 }
 
 @font-face {
   font-family: TT-Hoves-Bold;
-  src: url("fonts/tt-hoves-bold.otf");
+  src: url("../fonts/tt-hoves-bold.otf");
 }
 
 @font-face {
   font-family: TT-Interfaces-Bold;
-  src: url("fonts/tt-interfaces-bold.ttf");
+  src: url("../fonts/tt-interfaces-bold.ttf");
 }
 
   
