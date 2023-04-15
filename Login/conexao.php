@@ -1,12 +1,11 @@
 <?php
-  $username = 'root';
-  $password = '';
-  $database = 'login';
-  $hostname = 'localhost';
 
-  $mysqli = new mysqli($hostname, $username, $password, $database);
+$hostname = "localhost";
+$username = "root";
+$password = "";
+$database = "biblioteca_teste";
 
-  if($mysqli->error) {
-    die("Falha ao conectar com o banco de dados: " .$mysqli->error);
-  }
-?>
+$mysqli = new mysqli($hostname, $username, $password, $database);
+mysqli_set_charset($mysqli, 'utf8');
+/*utf8mb4_general_ci como padrão de caracteres no Banco de Dados*/
+?> 

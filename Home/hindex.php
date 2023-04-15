@@ -22,25 +22,25 @@
     <div class="container">
       <div class="box">
         <div class="icon">
-          <a href="./hindex.html"><i class="fas fa-user"></i></a>
+          <a href="./hindex.php"><i class="fas fa-user"></i></a>
         </div>
           <h1>Início</h1>
       </div>
       <div class="box">
         <div class="icon">
-          <a href="../Livros/TelaLivros.html"><i class="fas fa-book"></i></a>
+          <a href="../Livros/TelaLivros.php"><i class="fas fa-book"></i></a>
         </div>
         <h1>Livros</h1>
       </div>
       <div class="box">
         <div class="icon">
-          <a href="../Requisição/request.html"><i class="fas fa-arrow-up-from-bracket"></i></a>
+          <a href="../Requisicao/request.php"><i class="fas fa-arrow-up-from-bracket"></i></a>
         </div>
         <h1>Requisição</h1>
       </div>
       <div class="box">
         <div class="icon">
-          <a href=""><i class="fas fa-circle-exclamation"></i></a>
+          <a href="../Sobre/hindex.html"><i class="fas fa-circle-exclamation"></i></a>
         </div>
         <h1>Sistema</h1>
       </div>

@@ -1,10 +1,15 @@
 <?php
- $username = 'root';
- $password = '';
- $database = 'biblioteca_teste';
- $hostname = 'localhost';
 
+
+ $hostname = "localhost";
+ $username = "root";
+ $password = "";
+ $database = "biblioteca_teste";
+ 
  $mysqli = new mysqli($hostname, $username, $password, $database);
+ mysqli_set_charset($mysqli, 'utf8');
+ /*utf8mb4_general_ci como padrão de caracteres no Banco de Dados*/
+
 
   $sql = "SELECT id, aluno_req, turma_req, livro_req, dataRequisicao_req, dataDevolucao_req FROM requisicao";
   $dados = mysqli_query($mysqli, $sql);
