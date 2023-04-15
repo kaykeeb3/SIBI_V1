@@ -134,6 +134,7 @@ h1 {
 .edit {
   background: none;
   border: none;
+  cursor: pointer;
 }
 .edit > i {
   color: #2AB572;

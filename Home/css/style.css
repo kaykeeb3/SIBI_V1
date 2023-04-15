@@ -135,15 +135,15 @@ header .bg-yellow {
 }
 
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .container-1 {
-    margin-top: 10rem;
+    margin-top: 3rem;
   }
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .reseved > h3 {
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
 }
 

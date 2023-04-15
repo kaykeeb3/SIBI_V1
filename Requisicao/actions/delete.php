@@ -1,11 +1,5 @@
 <?php
- $username = 'root';
- $password = '';
- $database = 'biblioteca_teste';
- $hostname = 'localhost';
-
- $mysqli = new mysqli($hostname, $username, $password, $database);
-
+  include_once('../../Cadastros/conexao.php');
   $sql = "SELECT id, aluno_req, turma_req, livro_req, dataRequisicao_req, dataDevolucao_req FROM requisicao";
   $dados = mysqli_query($mysqli, $sql);
   

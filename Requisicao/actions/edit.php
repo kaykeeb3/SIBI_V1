@@ -1,11 +1,6 @@
 <?php
 
-$username = 'root';
-$password = '';
-$database = 'biblioteca_teste';
-$hostname = 'localhost';
-
-$mysqli = new mysqli($hostname, $username, $password, $database);
+include_once('../../Cadastros/conexao.php');
 
 if (isset($_POST['codigo'])) {
 $codigo = $_POST['codigo'];

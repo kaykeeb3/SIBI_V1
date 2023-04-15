@@ -1,16 +1,16 @@
 @font-face {
   font-family: TT-Hoves;
-  src: url("fonts/tt-hoves-regular.otf");
+  src: url("fontes/tt-hoves-regular.otf");
 }
 
 @font-face {
   font-family: TT-Hoves-Bold;
-  src: url("fonts/tt-hoves-bold.otf");
+  src: url("fontes/tt-hoves-bold.otf");
 }
 
 @font-face {
   font-family: TT-Interfaces-Bold;
-  src: url("fonts/tt-interfaces-bold.ttf");
+  src: url("fontes/tt-interfaces-bold.ttf");
 }
 
   
@@ -22,6 +22,7 @@
     
   body{
     background-color: #dbefe4;
+  
   }
 
   header .bg-green {
@@ -95,7 +96,7 @@
     font-weight: bold;
     color: #808586;
     font-size: 18px;
-    font-family: TT-Interfaces-Bold;
+    font-family: TT-Interfaces-Bold; 
   }
 
   .btn-form{
