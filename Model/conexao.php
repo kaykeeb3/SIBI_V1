@@ -3,7 +3,7 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$database = "biblioteca_teste";
+$database = "login";
 
 $mysqli = new mysqli($hostname, $username, $password, $database);
 mysqli_set_charset($mysqli, 'utf8');
