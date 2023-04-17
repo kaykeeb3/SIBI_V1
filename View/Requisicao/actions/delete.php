@@ -1,7 +1,6 @@
 <?php
-
-include_once('../Cadastros/conexao.php');
-
+  include('../../../Controller/protect.php');
+  include_once('../../../Model/conexao.php');
   $sql = "SELECT id, aluno_req, turma_req, livro_req, dataRequisicao_req, dataDevolucao_req FROM requisicao";
   $dados = mysqli_query($mysqli, $sql);
   
@@ -14,7 +13,7 @@ include_once('../Cadastros/conexao.php');
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
     <title>Requisição</title>
 </head>
 <body>
@@ -35,10 +34,47 @@ include_once('../Cadastros/conexao.php');
 
      $sql = "SELECT * FROM requisicao WHERE aluno_req like '%$requisicao%' OR turma_req LIKE '%$requisicao%' OR dataRequisicao_req LIKE '%$requisicao%' OR dataDevolucao_req LIKE '%$requisicao%' ";
      $dados = mysqli_query($mysqli, $sql); 
-
-
      ?>
 
+<?php
+$id = $_POST['idReq'];
+$sql = " DELETE FROM requisicao WHERE ID like $id ";
+$resultado = mysqli_query($mysqli, $sql);
+
+  if ($resultado) {
+    echo "<script>document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('#modal-sucesso').classList.add('show');
+        setTimeout(function() {
+           document.querySelector('#modal-sucesso').classList.remove('show');
+        }, 2500);
+     });
+     
+
+     </script>";
+     } else  { 
+ 
+        echo "<script>document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#modal-fail').classList.add('show');
+            setTimeout(function() {
+               document.querySelector('#modal-fail').classList.remove('show');
+            }, 2500);
+         });
+
+         </script>"; 
+    }  
+ ?>
+
+ <div id="modal-sucesso" class="hide">
+                  <div class="modal-conteudo">
+                     <h1>Requisição Excluida com Sucesso!</h1>
+                  </div>
+               </div>
+ 
+    <div id="modal-fail" class="hide">
+    <div class="modal-conteudo">
+    <h1>Falha em Excluir Requisição!</h1>
+    </div>
+    </div>
 
 
       <form class="search" method="POST" action="request.php">
@@ -88,13 +124,7 @@ include_once('../Cadastros/conexao.php');
                 <div class='row-icons'>
                     
                     <div class='edit'> 
-                             <form method='POST' action='actions/edit.php'>
-                            <input type='hidden' name='codigo' value=$ID >
-                            <button type='submit'><i class='fa-solid fa-pen-to-square'></i>
-                            </button>
-                            </form>       
-                            </div>  
-                                                   
+                            <a class=''><i class='fa-solid fa-pen-to-square'></i></div> </a>                                
                     <div class='delete'>
                         <a href=''><i class='fa-regular fa-trash-can' onclick=" . '"' . "openModal(event)" . '"' . "></i></a>
                     </div>   
@@ -110,24 +140,26 @@ include_once('../Cadastros/conexao.php');
   <form method="POST" action="actions/delete.php" id="form-modal">
   <?php echo "<input type='hidden' name='idReq' value=$ID>"?>   
   <p>Deseja Mesmo Excluir?</p>
-  <div class="row-btn"> 
   <button onClick="lockModal()" id="Cancel" type="buttom">Cancelar</button>
-  <button type="submit" id="Confirm">Confirmar</button>
-  </div>
-  
+  <button type="submit">Confirmar</button>
   </form>
 </div>
+
+
+         
          <footer>
             <div class="quit">
-                <button><a href="../Home/hindex.php"><p><i class="fa-solid fa-power-off"></i>Sair</p></a></button>
+                <a><button><a><i class="fa-solid fa-power-off"></i>Sair</a></button></a>
             </div>
             <div class="addNew">
-                <a><button><a href="../Cadastros/CadastroRequisicao.php">Cadastrar Requisição<i class="fa-solid fa-arrow-right-to-bracket"></i></a></button> 
+                <a><button><a>Cadastrar Requisição<i class="fa-solid fa-arrow-right-to-bracket"></i></a></button> 
             </div>
             <div class="emptyspace">
              
             </div>
          </footer>
+       
+    
     </div>
    </div>
 </div>
@@ -158,9 +190,15 @@ include_once('../Cadastros/conexao.php');
     event.preventDefault();
 });
  
+     
+function voltarPaginaAnterior() {
+  setTimeout(function() {
+    location.href = "../request.php"; 
+  }, 3000);
+};
 
 
-
+voltarPaginaAnterior();
 
 
 </script>

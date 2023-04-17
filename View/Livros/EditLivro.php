@@ -1,6 +1,6 @@
 <?php
-
-include_once('../Cadastros/conexao.php');
+include('../../Controller/protect.php');
+include_once('../../Model/conexao.php');
 
 if (isset($_POST['codigo'])) {
 $codigoId = $_POST['codigo'];

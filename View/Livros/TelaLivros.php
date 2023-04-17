@@ -1,5 +1,6 @@
 <?php
-include_once('../Cadastros/conexao.php');
+include('../../Controller/protect.php');
+include_once('../../Model/conexao.php');
 include_once('categorias.php');
 
 if (isset( $_GET['busca'] ) ) {
@@ -445,7 +446,7 @@ $dados = mysqli_query($mysqli, $sql);
     <div class="div-cadastrar">
     <a href="../Cadastros/CadastroLivros.php" class="btn-cadastrarLivro"><i class="fa fa-solid fa-folder-open" id="icon-1"></i>Cadastrar Livro</a>
     </div>
-    <a href="../Home/hindex.php" class="btn-sair"><img src="./assets/icon-sair.png" id="icon-2" />Sair</a>
+    <a href="../Home/home.php" class="btn-sair"><img src="./assets/icon-sair.png" id="icon-2" />Sair</a>
 
     </div>
     

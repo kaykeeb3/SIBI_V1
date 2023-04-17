@@ -1,5 +1,5 @@
 <?php
-  include('conexao.php');
+  include_once('Model/conexao.php');
 
   if(isset($_POST['usuario']) || isset($_POST['senha'])) {
 
@@ -30,7 +30,7 @@
         $_SESSION['usuario'] = $usuario['usuario'];
         // Para exibir o nome do usuário quando estiver logado: $_SESSION['nome'] = $nome['nome'];
 
-        header("Location: ../Home/hindex.php");
+        header("Location: View/Home/home.php");
 
       } else {
          echo "<h1 style='margin-top: -590px; font-size: 20px;  color: red; position: fixed;'>Falha ao logar! Usuário ou Senha incorretos</h1>";
@@ -47,7 +47,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="View/Login/css/style.css">
   <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
 </head>
 <body>

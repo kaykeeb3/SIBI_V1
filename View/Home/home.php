@@ -1,5 +1,5 @@
 <?php
-  include('protect.php')
+  include('../../Controller/protect.php');
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
     <div class="container">
       <div class="box">
         <div class="icon">
-          <a href="./hindex.php"><i class="fas fa-user"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
         </div>
           <h1>Início</h1>
       </div>
@@ -40,7 +40,7 @@
       </div>
       <div class="box">
         <div class="icon">
-          <a href="../Sobre/hindex.html"><i class="fas fa-circle-exclamation"></i></a>
+          <a href="../Sobre/sobre.html"><i class="fas fa-circle-exclamation"></i></a>
         </div>
         <h1>Sistema</h1>
       </div>
@@ -50,7 +50,7 @@
     <div class="container-1">
       <div class="box-col">
         <div class="icon">
-        <a href="../Login/hindex.php"><i class="fas fa-arrow-left"></i></a>
+        <a href="../../index.php"><i class="fas fa-arrow-left"></i></a>
         </div>
         <h1>Sair</h1>
       </div>

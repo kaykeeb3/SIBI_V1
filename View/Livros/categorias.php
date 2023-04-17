@@ -1,6 +1,5 @@
 <?php
-
-
+include('../../Controller/protect.php');
 $sqlCategoriaRomance = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Romance%'";
 $sqlCategoriaAventura = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Aventura%'";
 $sqlCategoriaFantasia = "SELECT id, nome_livro, autor_livro, quant_livro FROM livro WHERE genero_livro LIKE '%Fantasia%'";

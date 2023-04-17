@@ -1,11 +1,38 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+include('../../../Controller/protect.php');
+include_once('../../../Model/conexao.php');
 
-   include_once('conexao.php');
+if (isset($_POST['codigo'])) {
+$codigo = $_POST['codigo'];
+}else{
+$codigo = '';    
+}
 
+
+
+$sql = "SELECT aluno_req, turma_req, livro_req, autor_req, dataRequisicao_req, dataDevolucao_req FROM requisicao WHERE id like '%$codigo%' ";
+$resultado = mysqli_query($mysqli, $sql);
+
+
+if (mysqli_num_rows($resultado) > 0) {
+$row = mysqli_fetch_assoc($resultado);
+$nome = $row['aluno_req'];
+$turma = $row['turma_req'];
+$livro = $row['livro_req'];
+$autor = $row['autor_req'];
+$dtReq = $row['dataRequisicao_req'];
+$dtEntrega = $row['dataDevolucao_req'];
+} else {
+    $resultado = mysqli_query($mysqli, $sql);
+}
+
+
+
+?>
+
+<?php
     if ( isset($_POST['submit']) ) {
+        $id = $_POST['idreq'];
         $AlunoReq = $_POST['alunoReq'];
         $TurmaReq = $_POST['turmaReq'];
         $LivroReq = $_POST['livroReq'];
@@ -15,27 +42,56 @@ error_reporting(E_ALL);
 
         
       
-         $sql = "INSERT INTO requisicao
-                     (aluno_req, turma_req, livro_req, autor_req, dataRequisicao_req, dataDevolucao_req)
-               VALUES 
-                     ( '$AlunoReq', '$TurmaReq', '$LivroReq', '$AutorReq', '$DataRequisicaoReq', '$DataDevolucaoReq')";
-
-         $resultado = mysqli_query($mysqli, $sql);
-         
-         if ($resultado) {
-            // Cria um script JavaScript que exibe o modal de sucesso após o envio do formulário
-            echo "<script>document.addEventListener('DOMContentLoaded', function() {
-                     document.querySelector('#modal-sucesso').classList.add('show');
-                     setTimeout(function() {
-                        document.querySelector('#modal-sucesso').classList.remove('show');
-                     }, 2500);
-                  });
-                  </script>";
-         }    
-
-      }
+        $sql = "UPDATE requisicao SET
+        aluno_req = '$AlunoReq',
+        turma_req = '$TurmaReq',
+        livro_req = '$LivroReq',
+        autor_req = '$AutorReq',
+        dataRequisicao_req = '$DataRequisicaoReq',
+        dataDevolucao_req = '$DataDevolucaoReq'
+        WHERE id = $id";
 
 
+$resultados = mysqli_query($mysqli, $sql);
+
+
+if ($resultado) {
+   
+    echo "<script>document.addEventListener('DOMContentLoaded', function() {
+              document.querySelector('#modal-sucesso').classList.add('show');
+              setTimeout(function() {
+                  document.querySelector('#modal-sucesso').classList.remove('show');
+              }, 2500);
+          });
+          
+     function voltarPaginaAnterior() {
+        setTimeout(function() {
+          location.href = '../request.php'; 
+        }, 2700);
+      };
+       voltarPaginaAnterior();
+
+          </script>";
+} else {
+    echo "<script>document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('#modal-fail').classList.add('show');
+        setTimeout(function() {
+           document.querySelector('#modal-fail').classList.remove('show');
+        }, 2500);
+     });
+
+     function voltarPaginaAnterior() {
+        setTimeout(function() {
+          location.href = '../request.php'; 
+        }, 2700);
+      };
+       voltarPaginaAnterior();
+
+
+     </script>"; 
+
+}
+    }
 ?>
 
 
@@ -48,7 +104,7 @@ error_reporting(E_ALL);
     <title>Cadastro de Requisição Livros</title>
     <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="css/CadastroRequisicao.css" type="text/css" />
+    <link rel="stylesheet" href="edit.css" type="text/css" />
   </head>
   
   <body>
@@ -59,9 +115,9 @@ error_reporting(E_ALL);
 
     <div class="container">
       <div class="container-form">
-          <form action="CadastroRequisicao.php" method="POST">
+          <form action="edit.php" method="POST">
              <div class="form-area">
-               <p class="title"> Cadastrar Requisição de Livro </p>
+               <p class="title"> Editar Requisição de Livro </p>
                <?php
                   $alunosDl = "SELECT aluno_req FROM requisicao";
                   $result = $mysqli->query($alunosDl);
@@ -73,12 +129,13 @@ error_reporting(E_ALL);
                 ?>
                 <div class="row">
                    <div class="col">
+                       <input type="hidden" name='idreq' value="<?php echo $codigo ; ?>" > 
                       <label class="label-form"> Aluno* </label>
-                      <input type="text" name="alunoReq" class="input-form" placeholder="Nome do Aluno" list="alunos" required>
+                      <input type="text" name="alunoReq" value="<?php echo $nome ?>" class="input-form" placeholder="Nome do Aluno" list="alunos" required>
                    </div>
                    <div class="col">
                       <label class="label-form"> Série / Curso* </label>
-                      <input type="text" name="turmaReq" list="turmas" class="input-form" placeholder="Série / Curso do Aluno" required>
+                      <input type="text" name="turmaReq" value="<?php echo $turma ?>" list="turmas" class="input-form" placeholder="Série / Curso do Aluno" required>
                       <datalist id="turmas">
                         <option>1° Administração </option>
                         <option>1° Informática </option>
@@ -109,34 +166,42 @@ error_reporting(E_ALL);
                 <div class="row">
                   <div class="col">
                      <label class="label-form"  > Livro* </label>
-                     <input type="text" name="livroReq" class="input-form" placeholder="Nome do Livro" list="livros" onchange="buscarAutor()" required>
+                     <input type="text" name="livroReq" value="<?php echo $livro ?>" class="input-form" placeholder="Nome do Livro" list="livros" onchange="buscarAutor()" required>
                   </div>
                   <div class="col">
                      <label class="label-form"> Autor* </label>
-                     <input type="text" name="autorReq" class="input-form" placeholder="Autor do Livro" required >
+                     <input type="text" name="autorReq" value="<?php echo $autor ;?>"class="input-form" placeholder="Autor do Livro" required >
                   </div>
                </div>
                <div class="row">
                   <div class="col">
                      <label class="label-form"> Data da Requisição* </label>
-                     <input type="date" name="dataRequisicaoReq" class="input-form" required>
+                     <input type="date" name="dataRequisicaoReq" value="<?php echo $dtReq ?>" class="input-form" required>
                   </div>
                   <div class="col">
                      <label class="label-form"> Data de Devolução* </label>
-                     <input type="date" name="dataDevolucaoReq" class="input-form" required>
+                     <input type="date" name="dataDevolucaoReq" value="<?php echo $dtEntrega ?>" class="input-form" required>
                   </div>
                </div>
 
-               <button type="submit" name="submit" class="btn-form" > Cadastrar <i class="fa-solid fa-arrow-right-to-bracket"></i> </button>
+               <button type="submit" name="submit" class="btn-form" > Editar <i class="fa-solid fa-arrow-right-to-bracket"></i> </button>
 
                <div id="modal-sucesso" class="hide">
                   <div class="modal-conteudo">
-                     <h1>Requisição cadastrada com Sucesso!</h1>
+                     <h1>Requisição Editada com Sucesso!</h1>
                   </div>
                </div>
+               <div id="modal-fail" class="hide">
+               <div class="modal-conteudo">
+             <h1>Falha em Editar Requisição!</h1>
+                     </div>
+                 </div>
+                   
+
+
              </div>
           </form>
-          <a href="../Requisicao/request.php" class="btn-exit"> <img id="exitIcon" src="assets/exit-icon.png" alt="exitIcon"></i>Sair </a>
+          <a href="../request.php" class="btn-exit"> <img id="exitIcon" src="assets/exit-icon.png" alt="exitIcon"></i>Sair </a>
       </div>
    </div>
 
@@ -144,28 +209,4 @@ error_reporting(E_ALL);
 
   </body>
 </html>
-    
-
-
-
-
-
-
-
-<!--
-<datalist id="marcas">
-   <option>1° Administração </option>
-   <option>1° Informática </option>
-   <option>1° Rede de Computadores </option>
-   <option>1° Segurança do Trabalho </option>
-   <option>2° Administração </option>
-   <option>2° Informática </option>
-   <option>2° Rede de Computadores </option>
-   <option>2° Segurança do Trabalho </option>
-   <option>3° Administração </option>
-   <option>3° Informática </option>
-   <option>3° Rede de Computadores </option>
-   <option>3° Segurança do Trabalho </option>
- </datalist>
--->
 

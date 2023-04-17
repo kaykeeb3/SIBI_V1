@@ -67,7 +67,7 @@ label {
 
  p {
   font-size: 38px;
-  margin: 50px;
+  margin: 30px;
   text-align: justify;
 }
 .row {
@@ -175,43 +175,7 @@ h1 {
   text-align: center;
 }
 
-.box-1 {
-  height: 240px;
-  width: 15%;
-  border: 2px solid #2AB572;
-  margin: 20px;
-  box-sizing: border-box;
-  padding: 0 0 74px;
-  font-size: 50px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-
-.box-2 {
-  height: 240px;
-  width: 15%;
-  border: 2px solid #2AB572;
-  margin: 20px;
-  box-sizing: border-box;
-  padding: 0 0 74px;
-  font-size: 50px;
-  border-radius: 5px;
-  text-align: center;
-}
-.box-3 {
-  height: 240px;
-  width: 15%;
-  border: 2px solid #2AB572;
-  margin: 20px;
-  box-sizing: border-box;
-  padding: 0 0 74px;
-  font-size: 50px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.box-4 {
+.box-1, .box-2, .box-3, .box-4 {
   height: 240px;
   width: 15%;
   border: 2px solid #2AB572;
@@ -228,37 +192,6 @@ img {
   margin: 7px;
   height: 222px;
 }
-
-.ja {
-  width: 94%; 
-  margin: 7px;
-  height: 222px; 
-}
-
-.kb {
-  width: 94%; 
-  margin: 7px;
-  height: 222px; 
-}
-
-.mv {
-  width: 94%; 
-  margin: 7px;
-  height: 222px; 
-}
-
-.rh {
-  width: 94%; 
-  margin: 7px;
-  height: 222px; 
-}
-
-.br {
-  width: 94%; 
-  margin: 7px;
-  height: 222px; 
-}
-
 
 .reseved {
   position: absolute;

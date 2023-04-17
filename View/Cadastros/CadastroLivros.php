@@ -1,8 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-   include_once('conexao.php');
+   include('../../Controller/protect.php');
+   include_once('../../Model/conexao.php');
 
     if ( isset($_POST['submit']) ) {
         $NomeLivro = $_POST['nomeLivro'];
