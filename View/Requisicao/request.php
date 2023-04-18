@@ -6,7 +6,6 @@
   $dados = mysqli_query($mysqli, $sql);
   
 ?>  
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
