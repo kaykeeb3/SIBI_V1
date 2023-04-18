@@ -6,6 +6,10 @@
   $dados = mysqli_query($mysqli, $sql);
   
 ?>  
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/addchanges
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,8 +120,13 @@
 </div>
          <footer>
             <div class="quit">
+<<<<<<< HEAD
             <a href="../Home/home.php" class="btn-exit"> <img id="exitIcon" src="actions/assets/exit-icon.png" alt="exitIcon"></i>Sair </a>
           </div>
+=======
+                <button><a href="../Home/home.php"><p><i class="fa-solid fa-power-off"></i>Sair</p></a></button>
+            </div>
+>>>>>>> origin/addchanges
             <div class="addNew">
                 <a><button><a href="../Cadastros/CadastroRequisicao.php">Cadastrar Requisição<i class="fa-solid fa-arrow-right-to-bracket"></i></a></button> 
             </div>
