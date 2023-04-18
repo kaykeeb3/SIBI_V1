@@ -1,0 +1,149 @@
+@font-face {
+  font-family: TT-Hoves;
+  src: url("../fonts/tt-hoves-regular.otf");
+}
+
+@font-face {
+  font-family: TT-Hoves-Bold;
+  src: url("../fonts/tt-hoves-bold.otf");
+}
+
+@font-face {
+  font-family: TT-Interfaces-Bold;
+  src: url("../fonts/tt-interfaces-bold.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #DBEFE4;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0px 0px 60px;
+  margin-top: 8px;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #DBEFE4;
+}
+
+
+.container-1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 0px 60px 22px;
+  margin-top: 8px;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #DBEFE4;
+}
+
+
+.box {
+  width: 20%;
+  height: 240px;
+  background: red;
+  margin: 20px;
+  box-sizing: border-box;
+  padding: 0 0 74px;
+  font-size: 50px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #2AB572;
+}
+
+
+.box-col {
+  width: 20%;
+  height: 240px;
+  background: red;
+  margin: 20px;
+  box-sizing: border-box;
+  font-size: 50px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px;
+  background-color: #2AB572;
+}
+
+h1 {
+  font-family: TT-Hoves;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 100px 0 0;
+  color: #808586;
+}
+
+h2 {
+  font-family: TT-Hoves;
+  font-size: 30px;
+  font-weight: 600;
+  color: #808586;
+  padding: 12px 42px 1px;
+}
+
+.icon {
+  font-size: 100px;
+  padding: 60px 0 0;
+}
+
+.icon > a {
+  color: #000;
+  opacity: 60%;
+}
+
+
+header .bg-green {
+  background-color: #2AB572;
+}
+
+header .bg-yellow {
+  background-color: #FFBA00;
+}
+
+
+.reseved > h3 {
+  font-family: TT-Hoves-Bold;
+  font-size: 22px;
+  font-weight: 700;
+  color: #808586;
+  text-align: center;
+  padding: 0px 0px 0px;
+}
+
+@media screen and (max-width: 1020px) {
+  body {
+    background-color: #DBEFE4;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .reseved > h3 {
+    font-weight: 500;
+  }
+}
+
+
+@media screen and (min-width: 1800px) {
+  .container-1 {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .reseved > h3 {
+    margin-top: 3rem;
+  }
+}
+

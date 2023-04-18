@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@font-face {
+  font-family: TT-Hoves;
+  src: url("fonts/tt-hoves-regular.otf");
+}
+
+@font-face {
+  font-family: TT-Hoves-Bold;
+  src: url("fonts//tt-hoves-bold.otf");
+}
+
+@font-face {
+  font-family: TT-Interfaces-Bold;
+  src: url("fonts//tt-interfaces-bold.ttf");
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #DBEFE4;
+    height: 100%;
+    width: 100%;
+    font-family: 'TT-Hoves';
+  }
+  
+
+
+header .bg-green {
+    background-color: #2AB572;
+  }
+  
+  header .bg-yellow {
+    background-color: #FFBA00;
+  }
+  
+  @media screen and (min-width: 1020px) {
+    body {
+      background-color: #DBEFE4;
+    }
+  }
+  
+.search {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.search-box {
+  width: 70%;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border: solid #585757;
+  border-radius: 20px;
+}
+.search-box > input {
+  width: 94%;
+  border: 2px white solid;
+  border-radius: 30px;
+  height: 50px;
+  color: #302e2e;
+  padding: 10px;
+  font-size: max(20px,1vw);
+  font-family: 'TT-Hoves';
+}  
+
+.search-box > input [type="search"]:hover {
+  color: white;
+}
+
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+
+.search-box > button   {
+  font-size: 28px;  
+  border:none;
+  cursor: grab;
+  background-color: transparent;
+}
+
+a  {
+ cursor: grab;
+ text-decoration: none;
+ color: white;
+}
+
+.container {
+  border-top: 2px dashed black;
+ display: flex;
+ height: 100%;
+ margin-top: 15px;
+ justify-content: space-between;
+ flex-direction: column;
+ min-height: 100%;
+}
+
+main {
+    margin-top: 3vh;
+    height: auto;
+    width: 100%;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+ }
+.card {
+    display: flex;
+    height: 60vh;
+    margin-top: 0;
+    margin: 2vw;
+   flex-direction: column;
+    border: 3px solid #2bb572;
+    border-radius: 12px;
+    width: 20%;
+    margin-bottom: 1vh;
+    background-color: #f9f3e5;
+    font-size: 20px;
+    color: #6b6f72;
+}
+label {
+ font-weight: bold;
+   font-size: max(22px, 1.1vw);
+   font-family: "TT-Hoves-Bold";
+}
+.row1 {
+    padding-top: 3vh;
+    padding-left: 1vw;
+    width: 100%;
+    height: 20%;
+} 
+.row1 > p {
+  font-size: max(20px, 1vw) ;
+}
+.row {
+    border-top: 2px dashed black;
+    margin-left: 0;
+    padding-top:2vh;
+    padding-left: 1vw;
+    width: 100%;
+    height: 20%; 
+}
+
+.row>p {
+    padding-bottom: 10px;
+    font-size: max(20px, 1vw) ;
+}
+
+
+.edit {
+  width: 50%;
+  height: 50%;
+
+}
+
+.edit > form > button {
+  border: none;
+  background-color: transparent;
+  cursor: grab;
+}
+.edit > form > button > i{
+  color: #2AB572;
+  font-size: max(33px,2vw);
+
+}
+
+.delete {
+  width: auto;
+  height: auto;
+}
+.delete> a > i {
+  color: #df2020;
+  font-size: max(33px,2vw);
+}
+.row-icons {
+  border-top: 2px dashed black;
+  display: flex;
+  width: 100%;
+  height: 20%;
+  padding: 2vw;
+  flex: 0;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  bottom: 2%;
+  pointer-events: none;
+  
+}
+
+.quit {
+  width: 40%;
+  flex-grow: 0;
+
+}
+
+
+#exitIcon{
+  width: 52px;
+  height: 52px
+}
+
+.quit > a {
+  background-color: #2AB572;
+  cursor: grab;
+  color: #fff; 
+  font-family: 'TT-Hoves';
+  width: 125px;
+  margin-left: 25px;
+  height: 60%;
+  border: none;
+  white-space: nowrap;
+  font-size: max(33px,1vw);
+  margin-top: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  pointer-events: all;
+}
+
+.quit > a > p {
+ white-space: nowrap;
+ pointer-events: all;
+}
+
+
+.addNew {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  text-align: center;
+  flex-grow: 0;
+}
+
+.addNew > button{
+  background-color: #2AB572;
+  color: #FFF;
+  margin-top: 15px;
+  border-radius: 20px;
+  font-size: max(17px,1vw);
+  width: 74%;
+  height:70%;
+  border: none;
+  pointer-events: all;
+  font-family: 'TT-Hoves';
+  white-space: nowrap;
+}
+
+.addNew > button > a > i {
+font-size:max(18px,1vw) ;
+margin-left: 3px;
+}
+
+.emptyspace {
+  width: 40%;
+  pointer-events: none;
+  flex-grow: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  width: 25vw;
+  background: #f2f2f2;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.modal > form {
+ height: 100%;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ ;
+}
+
+
+.modal > form > p{
+  font-family: TT-Hoves;
+  font-size:max(23px,1.1vw);
+  white-space: nowrap;
+  padding-bottom: 12px;
+ }
+
+.row-btn{
+ display: flex;
+ width: 100%;
+ height: 4vh;
+ justify-content: space-between;
+ padding-top: 12px;
+}
+
+#Cancel {
+ width: 42%;
+ height: 4vh;
+ color: white;
+ border: none;
+ background-color: #2AB572 ;
+ font-size:max(20px,1vw);
+}
+
+#Confirm {
+  background-color: #df2020;
+  width: 42%;
+  height: 4vh;
+  border: none;
+  color: white;
+  font-size:max(20px,1vw)
+}
+
+.hide {
+  display: none;
+  position: absolute;
+
+}
+
+.show{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.75)  
+}
+
+.show h1{
+  font-size: 45px;
+    font-family: TT-Hoves-Bold;
+    color: #2AB572;
+  margin-bottom: 5px;
+}
+
+
+.modal-conteudo{
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  width: 30rem;
+  background: #f2f2f2;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.modal-fail > h1 {
+  font-size: 45px;
+  font-family: TT-Hoves-Bold;
+  color: #df2020 ;
+margin-bottom: 5px;
+}
+
+
+
+
+
