@@ -208,30 +208,38 @@ footer {
   flex-grow: 0;
 
 }
-.quit > button {
+
+
+#exitIcon{
+  width: 52px;
+  height: 52px
+}
+
+.quit > a {
   background-color: #2AB572;
   cursor: grab;
   color: #fff; 
-  border-radius: 5px;
   font-family: 'TT-Hoves';
-  width: 20%;
-  margin-left: 10px;
+  width: 125px;
+  margin-left: 25px;
   height: 60%;
   border: none;
   white-space: nowrap;
-  font-size: max(20px,1vw);
-  margin-top: 30px;
+  font-size: max(33px,1vw);
+  margin-top: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  pointer-events: all;
 }
 
-.quit > button > a > p {
+.quit > a > p {
  white-space: nowrap;
- font-size: max(17px,1vw);
  pointer-events: all;
 }
 
-.quit > button > a > p > i {
-  margin: 5px;
-}
 
 .addNew {
   display: flex;
@@ -246,7 +254,6 @@ footer {
   color: #FFF;
   margin-top: 15px;
   border-radius: 20px;
-  padding: 1px;
   font-size: max(17px,1vw);
   width: 74%;
   height:70%;

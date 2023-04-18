@@ -149,7 +149,7 @@ $resultado = mysqli_query($mysqli, $sql);
          
          <footer>
             <div class="quit">
-                <a><button><a><i class="fa-solid fa-power-off"></i>Sair</a></button></a>
+            <a href="../../Home/home.php" class="btn-exit"> <img id="exitIcon" src="assets/exit-icon.png" alt="exitIcon"></i>Sair </a>
             </div>
             <div class="addNew">
                 <a><button><a>Cadastrar Requisição<i class="fa-solid fa-arrow-right-to-bracket"></i></a></button> 

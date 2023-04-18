@@ -6,7 +6,6 @@
   $dados = mysqli_query($mysqli, $sql);
   
 ?>  
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +21,6 @@
         <div class="bg-green">⠀</div>
         <div class="bg-yellow">⠀</div>
       </header>
-
-
 <?php 
 
  if (isset($_POST['request'])){
@@ -119,8 +116,8 @@
 </div>
          <footer>
             <div class="quit">
-                <button><a href="../Home/home.php"><p><i class="fa-solid fa-power-off"></i>Sair</p></a></button>
-            </div>
+            <a href="../Home/home.php" class="btn-exit"> <img id="exitIcon" src="actions/assets/exit-icon.png" alt="exitIcon"></i>Sair </a>
+          </div>
             <div class="addNew">
                 <a><button><a href="../Cadastros/CadastroRequisicao.php">Cadastrar Requisição<i class="fa-solid fa-arrow-right-to-bracket"></i></a></button> 
             </div>
