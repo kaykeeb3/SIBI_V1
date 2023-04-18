@@ -21,8 +21,6 @@
         <div class="bg-green">⠀</div>
         <div class="bg-yellow">⠀</div>
       </header>
-
-
 <?php 
 
  if (isset($_POST['request'])){
