@@ -41,3 +41,14 @@ SIBI - Gerardo José = Sistema de Biblioteca Gerardo José, é um sistema de uso
 
 
 - [Visite o projeto](https://sibi.vercel.app/)
+
+<br>
+
+## 😎 Créditos
+
+- [Kayke Barbosa](https://kaykedev.vercel.app/)
+- [João Alison](https://joaoalison-web.vercel.app/)
+- [Romário Henrique](https://github.com/RomarioHenrique)
+- [Bruno Rodrigues](https://github.com/Brunno-Rodrigues-Lira)
+- [EEEP Gerardo José Dias de Loiola](https://github.com/EEEP-Gerardo)
+
