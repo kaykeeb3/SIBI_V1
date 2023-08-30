@@ -28,7 +28,7 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- Php
+- Php 8
 - MYSQL 
 - HTML
 - CSS
