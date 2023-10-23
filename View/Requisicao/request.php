@@ -1,10 +1,10 @@
 <?php
-  include('../../Controller/protect.php');
-  include_once('../../Model/conexao.php');
+    include('../../Controller/protect.php');
+    include_once('../../Model/conexao.php');
+    
+    $sql = "SELECT id, aluno_req, turma_req, livro_req, dataRequisicao_req, dataDevolucao_req FROM requisicao";
+    $dados = mysqli_query($mysqli, $sql);
 
-  $sql = "SELECT id, aluno_req, turma_req, livro_req, dataRequisicao_req, dataDevolucao_req FROM requisicao";
-  $dados = mysqli_query($mysqli, $sql);
-  
 ?>  
 <!DOCTYPE html>
 <html lang="en">
@@ -23,20 +23,18 @@
       </header>
 <?php 
 
- if (isset($_POST['request'])){
-       $requisicao = $_POST['request'];
-
-     } else {
-       $requisicao = '';
-     }
-
-     $sql = "SELECT * FROM requisicao WHERE aluno_req like '%$requisicao%' OR turma_req LIKE '%$requisicao%' OR dataRequisicao_req LIKE '%$requisicao%' OR dataDevolucao_req LIKE '%$requisicao%' ";
-     $dados = mysqli_query($mysqli, $sql); 
-
-
-     ?>
-
-
+   if (isset($_POST['request'])){
+         $requisicao = $_POST['request'];
+  
+       } else {
+         $requisicao = '';
+       }
+  
+       $sql = "SELECT * FROM requisicao WHERE aluno_req like '%$requisicao%' OR turma_req LIKE '%$requisicao%' OR dataRequisicao_req LIKE '%$requisicao%' OR dataDevolucao_req LIKE '%$requisicao%' ";
+       $dados = mysqli_query($mysqli, $sql); 
+  
+  
+       ?>
 
       <form class="search" method="POST" action="request.php">
         <div class="search-box">
@@ -154,11 +152,6 @@
   btnCancelar.addEventListener("click", function(event) {
     event.preventDefault();
 });
- 
-
-
-
-
 
 </script>
 
