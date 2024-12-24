@@ -1,6 +1,6 @@
 <h1 align="center">SIBI - Gerardo José</h1>
 
-<p align="center">SIBI - Gerardo José: é um sistema de uso administrativo para bibliotecas</p>
+<p align="center">SIBI - Gerardo José: an administrative system for library management</p>
 
 <br>
 
@@ -23,32 +23,26 @@
   <img alt="SIBI web" src="./images/cadastro_requisicao.jpg" width="100%" height="70%">
 </p>
 
+## 🚀 Technologies
 
-## 🚀 Tecnologias
+This project was developed using the following technologies:
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
-
-- Php 8
-- MYSQL 
+- PHP 8
+- MySQL
 - HTML
 - CSS
-- Javascript 
-- Git e Github
+- JavaScript
+- Git and GitHub
 
-## 💻 Projeto
+## 💻 Project
 
-SIBI - Gerardo José = Sistema de Biblioteca Gerardo José, é um sistema de uso administrativo, ele tem como principal objetivo ter total controle sobre o gerenciamento de uma Biblioteca por meio virtual, atualmente ele encontra-se na sua V1 inicial. Ele foi desenvolvido aparti de uma necessidade vista que ocasionava sérios problemas, vale ressaltar que foi desenvolvido como um trabalho voluntário, que foi retribuído a Escola. obs: objetivo principal do projeto é facilidade, segurança e praticidade.
-
-
-- [Visite o projeto](https://sibi.vercel.app/)
-
+SIBI - Gerardo José is an administrative system for library management, designed to provide complete control over library operations in a virtual environment. Currently in its initial V1 stage, it was developed to address specific challenges that were causing significant issues. It is important to note that this was developed as a volunteer project, which was a contribution to the school. The main goals of the project are ease of use, security, and practicality.
 <br>
 
-## 😎 Créditos
+## 😎 Credits
 
 - [Kayke Barbosa](https://kaykedev.vercel.app/)
 - [João Alison](https://joaoalison-web.vercel.app/)
 - [Romário Henrique](https://github.com/RomarioHenrique)
 - [Bruno Rodrigues](https://github.com/Brunno-Rodrigues-Lira)
 - [EEEP Gerardo José Dias de Loiola](https://github.com/EEEP-Gerardo)
-
